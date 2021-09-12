@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-                                      Biblioteca PY.Tagogoras  
+                                         Biblioteca PY.Tagogoras  
                                                      
 -----------------------------------------------------------------------------------------------------------------------------------------------------                                                     
                                                      
@@ -15,6 +15,7 @@
 
 
 <br>
+  
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
@@ -25,6 +26,8 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 
 ## 💻 Projeto
+  
+  
                                           
                                           
  <p align="center">Wallace Leonel </p>
