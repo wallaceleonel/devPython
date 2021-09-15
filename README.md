@@ -1,11 +1,12 @@
------------------------------------------------------------------------------------------------------------------------------------------------------
-                                         Biblioteca PY.Tagogoras  
-                                                     
------------------------------------------------------------------------------------------------------------------------------------------------------                                                     
-                                                     
+
 <h1 align="center">
+  Biblioteca PY.Tagoras  
+  </h1>                                                   
+                                                   
+                                                     
+<h2 align="center">
     <img alt="home" title="home" src="https://raw.githubusercontent.com/wallaceleonel/py/main/son_blog/media/banner.png" />
-</h1>
+</h2>
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
