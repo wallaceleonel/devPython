@@ -22,8 +22,11 @@
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   <img src="https://cdn-icons-png.flaticon.com/512/5524/5524411.png"  align="right" width="150">
+  
 - [Python](https://www.python.org/)
+  
 - [Django](https://www.djangoproject.com/)
+  
 - [SQLite](https://www.sqlite.org/index.html)
 
 
