@@ -75,6 +75,6 @@ class GitHubBot:
     time.sleep(1)
 
 
-esau_ig = GitHubBot('<username>', '<password>')
-esau_ig.login()
-esau_ig.new_repository()
+wallaceleonel_ig = GitHubBot('<username>', '<password>')
+wallaceleonel_ig.login()
+wallaceleonel_ig.new_repository()
