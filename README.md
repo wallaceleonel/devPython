@@ -42,7 +42,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   
   
   
-  ## 📖 Desing 
+## 🔖 Desing
   
   A inspiração para o Desing e ser muito intuitivo , algo clean e que lembre um jornal afinal o intuito e conseguir identificar as materias e poder ler ;
   
