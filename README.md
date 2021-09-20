@@ -21,7 +21,7 @@
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
-  <img src="https://cdn-icons-png.flaticon.com/512/5524/5524411.png"  align="right" width="155">
+  <img src="https://cdn-icons-png.flaticon.com/512/4406/4406389.png"  align="right" width="155">
   
 - [Python](https://www.python.org/)
   
