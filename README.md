@@ -46,7 +46,8 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   
   A inspiração para o Desing e ser muito intuitivo , algo clean e que lembre um jornal afinal o intuito e conseguir identificar as materias e poder ler ;
   
-  Algumas imagens das sessoes,areas de post que estão em construção 🏗️
+  Algumas imagens das sessoes,areas de post que estão em construção....
+    <img src="https://cdn-icons-png.flaticon.com/512/1275/1275442.png"  align="right" width="155">
   
   
 
