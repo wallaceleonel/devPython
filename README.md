@@ -4,8 +4,8 @@
   </h1>                                                   
                                                    
                                                      
-<h2 align="center">
-    <img src="https://github.com/wallaceleonel/py/blob/main/son_blog/media/banner.png">
+<h2 align="center";>
+   <img src="https://github.com/wallaceleonel/py/blob/main/son_blog/media/banner.png">
 </h2>
 
 
