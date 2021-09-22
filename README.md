@@ -28,6 +28,8 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Django](https://www.djangoproject.com/)
   
 - [SQLite](https://www.sqlite.org/index.html)
+  
+- [Heroku](https://devcenter.heroku.com/categories/reference)
 
 
 ## 💻 Projeto
