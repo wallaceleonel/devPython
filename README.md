@@ -5,7 +5,7 @@
                                                    
                                                      
 <h2 align="center";>
-   <img src="https://github.com/wallaceleonel/py/blob/main/son_blog/media/banner.png">
+   <img src="https://initiate.alphacoders.com/queue_files/1561450.png">
 </h2>
 
 
