@@ -53,7 +53,6 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   
   
 
-                                          
-                                          
+                                                                                  
  <p align="center">Wallace Leonel </p>
  
