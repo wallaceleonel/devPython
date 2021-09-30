@@ -51,8 +51,6 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   Algumas imagens das sessoes,areas de post que estão em construção....
     <img src="https://cdn-icons-png.flaticon.com/512/1275/1275442.png"  align="right" width="155">
   
-  
 
-                                                                                  
- <p align="center">Wallace Leonel </p>
+<p align="center">Wallace Leonel </p>
  
