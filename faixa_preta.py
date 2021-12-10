@@ -3,6 +3,7 @@ def validar_idade (idade):
        print('sorry,voce nao pode tirar a carta,',nome)
        return False
     else:
+        
        print('\n OTIMO podemos processeguir,',nome)
        return True
 
