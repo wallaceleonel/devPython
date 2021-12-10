@@ -1,4 +1,4 @@
-def validar_idade (idade):
+]def validar_idade (idade):
     if idade < 18:
        print('sorry,voce nao pode tirar a carta,',nome)
        return False
