@@ -51,6 +51,7 @@ class GitHubBot:
     time.sleep(2)
     # To define if repository visibility is 'public' or 'private'
     if pp == 'Private':
+      
       # Private
       priv_vis = driver.find_element_by_xpath("//input[@id='repository_visibility_private']")
       priv_vis.click()
