@@ -16,6 +16,7 @@ class GitHubBot:
   
 
   def login(self):
+    
     # GitHub direct URL
     driver = self.driver
     driver.get('https://github.com/')
@@ -66,6 +67,7 @@ class GitHubBot:
       read_me.click()
       time.sleep(1)
     else:
+      
       # Private
       priv_vis = driver.find_element_by_xpath("//input[@id='repository_visibility_private']")
       priv_vis.click()
