@@ -24,6 +24,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=255)),
                 ('resumo', models.CharField(max_length=255)),
                 ('content', models.TextField()),
+                
                 ('created_at', models.DateField(auto_now_add=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
