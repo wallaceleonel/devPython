@@ -11,6 +11,7 @@ def escolher_carta():
     print("1-carro\n2 -moto\n3 -carro e moto")
     return int(input())
 
+
 def calcular_preco(escolha):
     valor_carro = 1500
     valor_moto = 1000
