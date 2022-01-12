@@ -39,7 +39,6 @@ if validar_idade(idade):
     print('mas vou ver com o meu gerente se posso da um desconto....')
     valor = desconto(valor)
 
-
     print('\ncom desconto consigo fazer por',valor,'reais.')
 
     print('te insteressa?\n1 -sim\n2 -não')
