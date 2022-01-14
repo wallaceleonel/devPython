@@ -55,6 +55,7 @@ class TinderBot:
                     '//div[@class="Mx(a) Fxs(0) Sq(70px) Sq(60px)--s Bd Bdrs(50%) Bdc($c-like-green)"]')
             except:
                 pass
+            
         finally:
             sleep(3)
             botao_like.click()
