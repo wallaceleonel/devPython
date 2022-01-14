@@ -75,7 +75,6 @@ class TinderBot:
 bot = TinderBot()
 bot.login()
 bot.logar_com_telefone()
-
 bot.esperar_input_manual()
 bot.fechar_notificao_de_localizacao()
 bot.fechar_notificao_de_notificacoes()
