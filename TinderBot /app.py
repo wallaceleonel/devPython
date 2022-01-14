@@ -40,6 +40,7 @@ class TinderBot:
         pop_up_notificacoes = self.driver.find_element_by_xpath(
             '//*[@id="c366415127"]/div/div/div/div/div[3]/button[2]')
         sleep(3)
+        
         pop_up_notificacoes.click()
         sleep(3)
 
