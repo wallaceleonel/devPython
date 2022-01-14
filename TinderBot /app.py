@@ -78,6 +78,5 @@ bot.esperar_input_manual()
 bot.fechar_notificao_de_localizacao()
 bot.fechar_notificao_de_notificacoes()
 
-
 while True:
     bot.dar_like()
