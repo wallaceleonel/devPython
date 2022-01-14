@@ -43,7 +43,6 @@ class TinderBot:
         
         pop_up_notificacoes.click()
         sleep(3)
-
         
     def dar_like(self):
         try:
