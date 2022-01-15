@@ -1,4 +1,3 @@
-
 <h1 align="center">
   Biblioteca PY.Tagoras  
   </h1>                                                   
@@ -16,8 +15,6 @@
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  
-
-
 <br>
   
 ## 🚀 Tecnologias
