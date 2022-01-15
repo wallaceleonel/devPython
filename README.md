@@ -16,6 +16,7 @@
  
 <br>
   
+  
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
