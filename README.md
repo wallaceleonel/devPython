@@ -31,7 +31,6 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
   
 - [Heroku](https://devcenter.heroku.com/categories/reference)
 
-  
 
 ## 💻 Projeto
   
