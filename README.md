@@ -5,7 +5,7 @@
 
                                                      
 <h2 align="center";>
-   <img src="https://initiate.alphacoders.com/queue_files/1561450.png">
+   <img src="">
 </h2>
 
 
