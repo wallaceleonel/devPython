@@ -12,7 +12,6 @@ class TinderBot:
     def login(self):
         botao_login = self.driver.find_element_by_xpath(
             '//*[@id="c2094796203"]/div/div[1]/div/main/div[1]/div/div/div/div/header/div/div[2]/div[2]/a')
-     
     sleep(4)
         botao_login.click()
         sleep(4)
