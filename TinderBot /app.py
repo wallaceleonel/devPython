@@ -66,8 +66,7 @@ class TinderBot:
                         "//button[@title='Back to Tinder']")
                     sleep(3)
                     fechar_janela_match.click()
-                    sleep(3)
-           
+                    sleep(3)       
         except:
                 pass
 bot = TinderBot()
