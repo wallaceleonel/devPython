@@ -4,7 +4,6 @@ import ckeditor.fields
 import ckeditor_uploader.fields
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
