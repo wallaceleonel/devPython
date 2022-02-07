@@ -21,6 +21,7 @@ class TinderBot:
         sleep(4)
         logar_com_telefone.click()
         sleep(4) 
+    
     def esperar_input_manual(self):
         input()
 
