@@ -331,3 +331,22 @@ class Zydra():
                     salt_for_crypt = '$' + algorythm + '$' + salt + '$'
                     with open(dict_file, "r") as wordlist:
                         for word in wordlist:
+                            passwords_group.append(word)
+                            last_check += 1
+                            self.handling_too_many_open_files_error()
+                            if (len(passwords_group) == self.shot) or (possible_words - last_check == 0):
+                                passwords = passwords_group
+                                passwords_group = []
+                                self.process_lock.acquire()
+                                stop = self.stop.get()
+                                self.stop.put(stop)
+                                if stop is False:
+                                    t = Process(target=self.search_shadow_pass,
+                                                args=(passwords, salt_for_crypt, crypt_pass, possible_words, user))
+                                    self.threads.append(t)
+                                    self.process_count += 1
+                                    t.start()
+                                else:
+                                    self.process_lock.release()
+                            else:
+                                continue
