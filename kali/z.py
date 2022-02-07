@@ -375,3 +375,26 @@ class Zydra():
                             self.process_lock.release()
                     else:
                         continue
+                         for x in self.threads:
+                    x.join()
+                self.delete_temporary_directory()
+                self.end_time()
+        elif self.file_type == "pdf":
+            self.decrypted_file_name = "decrypted_" + file.split('/')[-1]
+            with open(dict_file, "r") as wordlist:
+                for word in wordlist:
+                    passwords_group.append(word)
+                    last_check += 1
+                    self.handling_too_many_open_files_error()
+                    if (len(passwords_group) == self.shot) or (possible_words - last_check == 0):
+                        passwords = passwords_group
+                        passwords_group = []
+                        self.process_lock.acquire()
+                        stop = self.stop.get()
+                        self.stop.put(stop)
+                        if stop is False:
+                            t = Process(target=self.search_pdf_pass, args=(passwords, file, possible_words))
+                            self.threads.append(t)
+                            self.process_count += 1
+                            t.start()
+                        else:
