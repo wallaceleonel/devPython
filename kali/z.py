@@ -552,3 +552,52 @@ class Zydra():
                             self.process_lock.release()
                     else:
                         continue
+                           for x in self.threads:
+                x.join()
+            self.delete_temporary_directory()
+            self.end_time()
+
+    def make_chars(self, char_type):
+        chartype_list = char_type.split(",")
+        chars = ""
+        for chartype in chartype_list:
+            if chartype == "lowercase":
+                chars += string.ascii_lowercase
+            elif chartype == "uppercase":
+                chars += string.ascii_uppercase
+            elif chartype == "letters":
+                chars += string.ascii_letters
+            elif chartype == "digits":
+                chars += string.digits
+            elif chartype == "symbols":
+                chars += string.punctuation
+            elif chartype == "space":
+                chars += " "
+            else:
+                return False
+        return chars
+
+    def banner(self):
+        term.clear()
+        term.pos(1, 1)
+		# check if font "epic" exists on this system
+        # sudo wget http://www.figlet.org/fonts/epic.flf -O /usr/share/figlet/epic.flf
+        bannerfont = "epic" if os.path.exists('/usr/share/figlet/epic.flf') else "banner"
+        banner = pyfiglet.figlet_format("ZYDRA", font=bannerfont).replace("\n", "\n\t\t", 7)
+		
+        cprint("\r\n\t" + "@" * 61, "blue", end="")
+        cprint("\n\t\t" + banner + "\t\tAuthor : Hamed Hosseini", "blue", attrs=['bold'])
+        cprint("\t" + "@" * 61 + "\n", "blue")
+
+    def end_time(self):
+        self.stop = True
+        end_time_show = time.asctime()
+        end_time = time.monotonic()
+        execution_time = (timedelta(seconds=end_time - self.start_time))
+        print(self.blue("End time ==> ") + self.white(end_time_show))
+        print(self.blue("Execution time ==> ") + self.white(str(execution_time)) + "\n")
+        term.saveCursor()
+        term.pos(7, 15)
+        term.writeLine("ok", term.green, term.blink)
+        term.restoreCursor()
+        exit(0)
