@@ -441,3 +441,52 @@ class Zydra():
         self.fun("Starting password cracking for " + file)
         print("\n " + self.blue("[*]") + self.white(" Count of possible passwords: ") + self.bwhite(str(possible_com)))
         if self.file_type == "text":
+             file = open(file)
+            for line in file.readlines():
+                self.count.get()
+                self.count.put(possible_com)
+                crypt_pass = line.split(':')[1].strip(' ')
+                if crypt_pass not in ['*', '!', '!!']:
+                    user = line.split(':')[0]
+                    print("  " + self.blue("[**]") + self.white(" cracking Password for: ") + self.bwhite(user))
+                    algorythm = crypt_pass.split('$')[1].strip(' ')
+                    salt = crypt_pass.split('$')[2].strip(' ')
+                    salt_for_crypt = '$' + algorythm + '$' + salt + '$'
+                    for password_length in range(int(min), int(max) + 1):
+                        for guess in itertools.product(chars, repeat=password_length):
+                            guess = ''.join(guess)
+                            passwords_group.append(guess)
+                            last_check += 1
+                            self.handling_too_many_open_files_error()
+                            if (len(passwords_group) == self.shot) or (possible_com - last_check == 0):
+                                passwords = passwords_group
+                                passwords_group = []
+                                self.process_lock.acquire()
+                                stop = self.stop.get()
+                                self.stop.put(stop)
+                                if stop is False:
+                                    t = Process(target=self.search_shadow_pass, args=(passwords, salt_for_crypt, crypt_pass, possible_com, user))
+                                    self.threads.append(t)
+                                    self.process_count += 1
+                                    t.start()
+                                else:
+                                    self.process_lock.release()
+                            else:
+                                continue
+                    for x in self.threads:
+                        x.join()
+                    self.last_process_number *= 2
+            self.end_time()
+        elif self.file_type == "zip":
+            for password_length in range(int(min), int(max) + 1):
+                for guess in itertools.product(chars, repeat=password_length):
+                    guess = ''.join(guess)
+                    passwords_group.append(guess)
+                    last_check += 1
+                    self.handling_too_many_open_files_error()
+                    if (len(passwords_group) == self.shot) or (possible_com - last_check == 0):
+                        passwords = passwords_group
+                        passwords_group = []
+                        self.process_lock.acquire()
+                        stop = self.stop.get()
+                        self.stop.put(stop)
