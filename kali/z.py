@@ -601,3 +601,79 @@ class Zydra():
         term.writeLine("ok", term.green, term.blink)
         term.restoreCursor()
         exit(0)
+          def main(self):
+        start_time_show = time.asctime()
+        usage = "%prog [options] [args]" \
+                "\n\nDictionary Mode:" \
+                "\n   %prog -f <file> -d <wordlist>" \
+                "\n\nBrute force Mode:" \
+                "\n   %prog -f <file> -b <char_type> -m <min_length> -x <max_length>" \
+                "\n\n   Available char_type:" \
+                "\n\t<lowercase>  The lowercase letters abcdefghijklmnopqrstuvwxyz" \
+                "\n\t<uppercase>  The uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
+                "\n\t<letters>    The concatenation of the lowercase and uppercase"\
+                "\n\t<digits>     numbers 0123456789" \
+                "\n\t<symbols>    punctuation characters !#$%&'()*+,-./:;<=>?@[\]^_`{|}~'" + '"' \
+                "\n\t<space>      space character" \
+                "\n   You can select multiple character types." \
+                "\n\tExample: %prog -f <file> -b <space,digits> -m 1 -x 8"
+
+        parser = optparse.OptionParser(usage)
+        parser.add_option("-d", dest="dictfile", type='string', help="Specifies dictionary file")
+        parser.add_option("-f", dest="file", type='string', help="Specifies the file")
+        parser.add_option("-b", dest="chartype", type='string', help="Specifies the character type")
+        parser.add_option("-m", dest="minlength", type='string', help="Specifies minimum length of password")
+        parser.add_option("-x", dest="maxlength", type='string', help="Specifies maximum length of password")
+
+        (options, args) = parser.parse_args()
+        try:
+            if options.file:
+                if os.path.isfile(options.file):
+                    file = os.path.abspath(options.file)
+                    if options.dictfile:
+                        if os.path.isfile(options.dictfile):
+                            dictfile = os.path.abspath(options.dictfile)
+                            print(self.blue("Start time ==> ") + self.white(start_time_show) + "\n")
+                            self.dict_guess_password(dictfile, file)
+                        else:
+                            parser.error(" " + options.dictfile + " dictionary file does not exist")
+                            exit(0)
+                    elif options.chartype:
+                        chars = self.make_chars(options.chartype)
+                        if chars is False:
+                            parser.error(" " + options.chartype + " character type is not valid, Use --help for more info")
+                        if options.minlength is None:
+                            parser.error(" Enter minimum length of password")
+                            exit(0)
+                        if options.maxlength is None:
+                            parser.error(" Enter maximum length of password")
+                            exit(0)
+                        if options.minlength > options.maxlength:
+                            parser.error(" Min and Max must be numbers and Min must be \nless than Max or be the same"
+                                         ", Use --help for more info")
+                            exit(0)
+                        else:
+                            print(self.blue("Start time ==> ") + self.white(start_time_show) + "\n")
+                            self.bruteforce_guess_password(chars, options.minlength, options.maxlength, file)
+
+                    else:
+                        parser.error(" Choose a wordlist or bruteforce method, Use --help for more info")
+                        exit(0)
+                else:
+                    parser.error("" + options.file + " file does not exist")
+                    exit(0)
+            else:
+                parser.error(" Choose a file, Use --help for more info")
+                exit(0)
+
+        except KeyboardInterrupt:
+            time.sleep(1)
+            self.delete_temporary_directory()
+            print(self.red("\n\n [-] Detected CTRL+C") + self.white("\n closing app...\n Finish\n"))
+            # self.end_time()
+            exit(0)
+
+
+if __name__ == "__main__":
+    cracker = Zydra()
+    cracker.main()
