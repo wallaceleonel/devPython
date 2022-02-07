@@ -398,3 +398,46 @@ class Zydra():
                             self.process_count += 1
                             t.start()
                         else:
+                                    self.process_lock.release()
+                    else:
+                        continue
+                for x in self.threads:
+                    x.join()
+                self.delete_temporary_directory()
+                self.end_time()
+        elif self.file_type == "rar":
+            with open(dict_file, "r") as wordlist:
+                for word in wordlist:
+                    passwords_group.append(word)
+                    last_check += 1
+                    self.handling_too_many_open_files_error()
+                    if (len(passwords_group) == self.shot) or (possible_words - last_check == 0):
+                        passwords = passwords_group
+                        passwords_group = []
+                        self.process_lock.acquire()
+                        stop = self.stop.get()
+                        self.stop.put(stop)
+                        if stop is False:  # ok finishing all process after finding password
+                            t = Process(target=self.search_rar_pass, args=(passwords, file, possible_words))
+                            self.threads.append(t)
+                            self.process_count += 1
+                            t.start()
+                        else:
+                            self.process_lock.release()
+                    else:
+                        continue
+                for x in self.threads:
+                    x.join()
+                self.delete_temporary_directory()
+                self.end_time()
+
+    def bruteforce_guess_password(self, chars, min, max, file):
+        last_check = 0
+        passwords_group = []
+        possible_com = self.count_possible_com(chars, int(min), int(max))
+        self.last_process_number = int(possible_com / self.shot) + (possible_com % self.shot > 0)
+        self.count.put(possible_com)
+        self.file_type = self.detect_file_type(file)
+        self.fun("Starting password cracking for " + file)
+        print("\n " + self.blue("[*]") + self.white(" Count of possible passwords: ") + self.bwhite(str(possible_com)))
+        if self.file_type == "text":
