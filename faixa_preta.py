@@ -11,6 +11,7 @@ def escolher_carta():
     print("1-carro\n2 -moto\n3 -carro e moto")
     return int(input())
 
+
 def calcular_preco(escolha):
     valor_carro = 1500
     valor_moto = 1000
@@ -24,8 +25,8 @@ def calcular_preco(escolha):
 def desconto(valor):
     return valor -(valor * 0.10)
 
-nome = input('digite seu nome:')
-idade =int(input('digite sua idade'))
+    nome = input('digite seu nome:')   
+idade =int(in  put('digite sua idade'))
 
 if validar_idade(idade):
     escolha = escolher_carta()
@@ -34,6 +35,7 @@ if validar_idade(idade):
     valor= calcular_preco(escolha)
 
     print('\n '+nome,'o valor total e de ',valor,'reais')
+   
     print('mas vou ver com o meu gerente se posso da um desconto....')
     valor = desconto(valor)
 
@@ -41,6 +43,7 @@ if validar_idade(idade):
 
     print('te insteressa?\n1 -sim\n2 -não')
     interesse = int(input())
+   
     if interesse == 1:
         print('\nPerfeito!Começaremos amanha')
     else:

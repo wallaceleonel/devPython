@@ -1,5 +1,7 @@
 from selenium import webdriver
+
 from selenium.webdriver.common.keys import Keys
+
 import time
 
 class GitHubBot:
@@ -15,6 +17,7 @@ class GitHubBot:
   
 
   def login(self):
+    
     # GitHub direct URL
     driver = self.driver
     driver.get('https://github.com/')
@@ -49,6 +52,7 @@ class GitHubBot:
     time.sleep(2)
     # To define if repository visibility is 'public' or 'private'
     if pp == 'Private':
+      
       # Private
       priv_vis = driver.find_element_by_xpath("//input[@id='repository_visibility_private']")
       priv_vis.click()
@@ -65,6 +69,7 @@ class GitHubBot:
       read_me.click()
       time.sleep(1)
     else:
+      
       # Private
       priv_vis = driver.find_element_by_xpath("//input[@id='repository_visibility_private']")
       priv_vis.click()
@@ -75,6 +80,6 @@ class GitHubBot:
     time.sleep(1)
 
 
-esau_ig = GitHubBot('<username>', '<password>')
-esau_ig.login()
-esau_ig.new_repository()
+wallaceleonel_ig = GitHubBot('<username>', '<password>')
+wallaceleonel_ig.login()
+wallaceleonel_ig.new_repository()

@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block sub_header %}
+
  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic">Docker Machine   </h1>
@@ -17,13 +18,14 @@
               <h3 class="mb-0">
                 <a class="text-dark" href="#">Certificados Digitais </a>
               </h3>
-              <div class="mb-1 text-muted">Março 12</div>
+              <div class="mb-1 text-muted">Março-12</div>
               <p class="card-text mb-auto">Os certifiacado valida valida um individuo provando que ele é quem diz ser .....</p>
               <a href="#">Continue Lendo</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="">
           </div>
         </div>
+       
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
@@ -31,16 +33,17 @@
               <h3 class="mb-0">
                 <a class="text-dark" href="#">Descomplicando Docker</a>
               </h3>
+             
               <div class="blog-post-meta">agosto 5</div>
               <p class="card-text mb-auto">O que é Docker ? Container é = a isolamento, sempre que nos referimos a um container .....</p>
               <a href="#">Continue Lendo</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="">
           </div>
+         
         </div>
       </div>
     </div>
-
 {% endblock %}
 {% block content %}
 <h3 class="pb-3 mb-4 font-italic border-bottom">
@@ -51,14 +54,15 @@
             <h2 class="blog-post-title">
                 <a href="/posts/{{ post.pk }}">{{post.title }}</a>
             </h2>
+         
             <p class="blog-post-meta">{{ post.created_at|date:'d,M Y' }}<a href="#">{{ post.author.get_full_name }}</a></p>
 
            {{ post.sumary|safe }}
           </div><!-- /.blog-post -->
             {% endfor %}
+
             <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
-
 {% endblock %}
