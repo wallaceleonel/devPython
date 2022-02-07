@@ -20,8 +20,7 @@ class TinderBot:
             '//*[@id="c366415127"]/div/div/div[1]/div/div[3]/span/div[3]/button')
         sleep(4)
         logar_com_telefone.click()
-        sleep(4)
-  
+        sleep(4) 
     def esperar_input_manual(self):
         input()
 
