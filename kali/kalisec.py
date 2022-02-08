@@ -960,10 +960,12 @@ else:
 			if sys.argv[2]=="safe":
 				set_safe()
 		url = sys.argv[1]
+		
 		if url.count("/")==2:
 			url = url + "/"
 		m = re.search('https?\://([^/]*)/?.*', url)
 		host = m.group(1)
+		
 		for i in range(700):
 			t = HTTPThread()
 			t.start()
