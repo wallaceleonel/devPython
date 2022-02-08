@@ -935,6 +935,7 @@ def httpcall(url):
 # monitors http threads and counts requests
 
 class MonitorThread(threading.Thread):
+	
 	def run(self):
 		previous=request_counter
 		while flag==0:
@@ -945,6 +946,7 @@ class MonitorThread(threading.Thread):
 			print "\n[*] Killing the proccess, attack has stopped"
 
 #execute 
+
 if len(sys.argv) < 2:
 	usage()
 	sys.exit()
