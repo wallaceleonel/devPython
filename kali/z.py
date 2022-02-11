@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import optparse
 import zipfile
 import rarfile  # need unrar tools
@@ -60,6 +59,7 @@ class Zydra():
                 print("\r" + self.blue(string) + "\n", end="")
                 return
 
+	
     def blue(self, string):
         return colored(string, "blue", attrs=['bold'])
 
