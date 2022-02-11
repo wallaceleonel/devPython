@@ -11,8 +11,8 @@
 ## Example:
 ##   $ bash <(curl "https://gitlab.com/kalilinux/recipes/live-build-config-examples/-/raw/master/offsec-awae-live.sh")
 #
-
 ## Exit on issue
+
 set -e
 
 ## Make sure we have programs needed
@@ -146,7 +146,6 @@ cat <<'EOF' | sudo tee kali-config/common/includes.chroot/usr/share/applications
 text/plain=code-oss.desktop
 EOF
 sudo chmod 0644 kali-config/common/includes.chroot/usr/share/applications/mimeapps.list
-
 ## Local mirror
 #echo "http://192.168.1.123/kali" | sudo tee .mirror >/dev/null
 
