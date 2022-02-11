@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # coding: utf-8
 # coding: latin-1
-
 import urllib2
 import sys
 import threading
@@ -172,9 +171,9 @@ def referer_list():
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
 	headers_referers.append('http://api.duckduckgo.com/html/?q=')
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
-	headers_referers.append('http://api.duckduckgo.com/html/?q=')
-	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
-	headers_referers.append('http://api.duckduckgo.com/html/?q=')
+	headers_referers.append('http://api.duckduckgo.com/html/?q=' )
+	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=' )
+	headers_referers.append('http://api.duckduckgo.com/html/?q=' )
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
 	headers_referers.append('http://api.duckduckgo.com/html/?q=')
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
@@ -304,7 +303,7 @@ def referer_list():
 	headers_referers.append('http://us.yhs4.search.yahoo.com/yhs/search?p=')
 	headers_referers.append('http://www.dmoz.org/search/search?q=')
 	headers_referers.append('http://www.baidu.com.br/s?usm=1&rn=100&wd=')
-	headers_referers.append('http://yandex.ru/yandsearch?text=')
+	headers_referers.append('http://yandex.ru/yandsearch?text=' )
 	headers_referers.append('http://www.zhongsou.com/third?w=')
 	headers_referers.append('http://hksearch.timway.com/search.php?query=')
 	headers_referers.append('http://find.ezilon.com/search.php?q=')
@@ -328,7 +327,7 @@ def referer_list():
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
 	headers_referers.append('http://api.duckduckgo.com/html/?q=')
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
-	headers_referers.append('http://api.duckduckgo.com/html/?q=')
+	headers_referers.append('http://api.duckduckgo.com/html/?q=' )
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
 	headers_referers.append('http://api.duckduckgo.com/html/?q=')
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
@@ -349,7 +348,7 @@ def referer_list():
 	headers_referers.append('http://hksearch.timway.com/search.php?query=')
 	headers_referers.append('http://find.ezilon.com/search.php?q=')
 	headers_referers.append('http://www.sogou.com/web?query=')
-	headers_referers.append('http://api.duckduckgo.com/html/?q=')
+	headers_referers.append('http://api.duckduckgo.com/html/?q=' )
 	headers_referers.append('http://boorow.com/Pages/site_br_aspx?query=')
 	headers_referers.append('http://www.google.com/?q=')
 	headers_referers.append('http://api.duckduckgo.com/html/?q=')
@@ -702,7 +701,7 @@ def keyword_list():
         keyword_top.append('014 Sochi Winter Olympics')
         keyword_top.append('IPhone')
         keyword_top.append('Samsung Galaxy S5')
-        keyword_top.append('Nexus 6')
+        keyword_top.append('Nexus')
         keyword_top.append('Moto G')
         keyword_top.append('Samsung Note 4')
         keyword_top.append('LG G3')
@@ -715,11 +714,11 @@ def keyword_list():
         keyword_top.append('DJ Bach')
         keyword_top.append('Ecosistema')
         keyword_top.append('Suicide')
-        keyword_top.append('Sex')
+        keyword_top.append('Sex0')
         keyword_top.append('Robin Williams')
         keyword_top.append('World Cup')
         keyword_top.append('Ca Si Le Roi')
-        keyword_top.append('Ebola')
+        keyword_top.append('Escola')
         keyword_top.append('Malaysia Airlines Flight 370')
         keyword_top.append('ALS Ice Bucket Challenge')
         keyword_top.append('Flappy Bird')
@@ -806,7 +805,7 @@ def keyword_list():
         keyword_top.append('Flappy Bird')
         keyword_top.append('Conchita Wurst')
         keyword_top.append('ISIS')
-        keyword_top.append('Frozen')
+        keyword_top.append('Frozen 4')
         keyword_top.append('014 Sochi Winter Olympics')
         keyword_top.append('IPhone')
         keyword_top.append('Samsung Galaxy S5')
@@ -838,7 +837,7 @@ def keyword_list():
         keyword_top.append('ISIS')
         keyword_top.append('Frozen')
         keyword_top.append('014 Sochi Winter Olympics')
-        keyword_top.append('IPhone')
+        keyword_top.append('IPhone s')
         keyword_top.append('Samsung Galaxy S5')
         keyword_top.append('Nexus 6')
         keyword_top.append('Moto G')
@@ -848,7 +847,7 @@ def keyword_list():
         keyword_top.append('Apple Watch')
         keyword_top.append('Nokia X')
         keyword_top.append('Ipad Air')
-        keyword_top.append('Facebook')
+        keyword_top.append('Facebook ')
         keyword_top.append('Anonymous')
         keyword_top.append('DJ Bach')
 
@@ -860,7 +859,7 @@ def keyword_list():
 def buildblock(size):
 	out_str = ''
 		for i in range(0, size):
-		a = random.randint(65, 160)
+		a = random.randint(65, 1600)
 		out_str += chr(a)
 			return(out_str)
 
@@ -950,6 +949,7 @@ class MonitorThread(threading.Thread):
 if len(sys.argv) < 2:
 	usage()
 	sys.exit()
+	
 else:
 	if sys.argv[1]=="help":
 		usage()
