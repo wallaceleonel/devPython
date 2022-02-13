@@ -1,10 +1,12 @@
 import string, sys, os, socket
 
+
 def program_restart():
 	python=sys.executable
 	os.execl(python, python, *sys.argv)
 
 cwd=os.getcwd()
+
 
 host=input('Enter site you want to attack:')
 
@@ -15,6 +17,7 @@ msg=input('Enter message you will send:')
 conn=int(input('Enter number of connections you will establish?'))
 
 ip=socket.gethostname()
+
 
 print(f'Attacking {host}')
 
