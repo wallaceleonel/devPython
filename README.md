@@ -1,8 +1,6 @@
 <h1 align="center">
   Biblioteca PY.Tagoras  
   </h1>                                                   
-
-
                                                      
 <h2 align="center";>
    <img src="">
