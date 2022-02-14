@@ -30,6 +30,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 
 ## 💻 Projeto
+
   
   O projeto consistem em transcrever um ano , um ano e meio de registros meus realizado de diversos cursos , certificações. 
 
